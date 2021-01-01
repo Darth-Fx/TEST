@@ -8,12 +8,12 @@ namespace Test
 	{
 		private readonly Func<string, List<string>> textPrepareForFrpcessingFunction;
 
-		public WordFrequencyAnalyzer(string text, Func<string, List<string>> textSeperateFunction)
+		public WordFrequencyAnalyzer(Func<string, List<string>> textSeperateFunction)
 		{
 			this.textPrepareForFrpcessingFunction = textSeperateFunction;
 		}
 
-		public int CalculateHighestFrequency(string text)//
+		public int CalculateHighestFrequency(string text)
 		{
 			var seperatedText = textPrepareForFrpcessingFunction(text);
 

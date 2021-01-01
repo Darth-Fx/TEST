@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-//fx kroonenburg//
+
 namespace Test
 {
     class Program
@@ -21,7 +21,7 @@ namespace Test
 			Func<string, List<string>> textSeperateFunction = (text) => text.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
 
 
-			var wordprocessor = new WordFrequencyAnalyzer(exampleText, textSeperateFunction);
+			var wordprocessor = new WordFrequencyAnalyzer(textSeperateFunction);
 
             Console.WriteLine($"{wordprocessor.CalculateHighestFrequency(exampleText)}");
 			Console.WriteLine($"{wordprocessor.CalculateFrequencyForWord(exampleText, "lake")}");
