@@ -8,7 +8,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-			const string exampleText = @"The pipo sun shines over the lake zeta ypsolon xavi wawa vuut tipo sien rara quentin pipo open";
+			const string exampleText = @"The pipo sun sun sun sun sunsun sun shines over the lake zeta ypsolon xavi wawa vuut tipo sien rara quentin pipo open";
 			//The sun shines over the lake 
 			//The sun shines over the lake 
 			//The sun shines over the lake
