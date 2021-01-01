@@ -11,7 +11,7 @@
 		private WordFrequency(string word, int frequenty)
 		{
 			this.word = word;
-			this.frequenty = frequenty;
+			this.frequenty = frequenty;//
 		}
 
 		public static IWordFrequency Create(string word, int frequenty) => new WordFrequency(word, frequenty);

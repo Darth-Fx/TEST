@@ -13,7 +13,7 @@ namespace Test
 			this.textPrepareForFrpcessingFunction = textSeperateFunction;
 		}
 
-		public int CalculateHighestFrequency(string text)
+		public int CalculateHighestFrequency(string text)//
 		{
 			var seperatedText = textPrepareForFrpcessingFunction(text);
 
