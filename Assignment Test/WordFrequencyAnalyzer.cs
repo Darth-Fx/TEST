@@ -15,27 +15,34 @@ namespace Test
 
 		public int CalculateHighestFrequency(string text)
 		{
+			if (text == null) throw new ArgumentNullException(nameof(text));
+
 			var seperatedText = textPrepareForFrpcessingFunction(text);
 
 			return seperatedText.GroupBy(v => v)
 					  .OrderByDescending(g => g.Count())
-					  .First()
+					  .FirstOrEmpty()
 					  .Count();
 		}
 
 		public int CalculateFrequencyForWord(string text, string word)
 		{
+			if (text == null) throw new ArgumentNullException(nameof(text));
+			if (word == null) throw new ArgumentNullException(nameof(word));
+
 			var seperatedText = textPrepareForFrpcessingFunction(text);
 
 			return seperatedText.GroupBy(v => v)
 						  .OrderByDescending(g => g.Count())
 						  .Where(g => g.Key == word)
 						  .Select(g => g.Count())
-						  .First();
+						  .FirstOrDefault();						  
 		}
 
 		public IList<IWordFrequency> CalculateMostFrequentNWords(string text, int n)
 		{
+			if (text == null) throw new ArgumentNullException(nameof(text));
+
 			var seperatedText = textPrepareForFrpcessingFunction(text);
 
 			return seperatedText.OrderBy(w => w)
