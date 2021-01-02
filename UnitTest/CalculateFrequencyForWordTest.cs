@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using Test;
 
-namespace UnitTest
+namespace Test
 {
     [TestClass]
     public class CalculateFrequencyForWordTest : CalculateFrequencyForWordTestBase

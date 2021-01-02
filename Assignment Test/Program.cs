@@ -9,16 +9,8 @@ namespace Test
         static void Main(string[] args)
         {
 			const string exampleText = @"The pipo sun sun sun sun sunsun sun shines over the lake zeta ypsolon xavi wawa vuut tipo sien rara quentin pipo open";
-			//The sun shines over the lake 
-			//The sun shines over the lake 
-			//The sun shines over the lake
-			//The sun shines over the lake 
-			//The sun shines over the lake 
-			//The sun shines over the lake 
-			//The sun shines over the lake";
-
-			//Wellicht dat we andere seperatord willen gebruiken etc.					  
-			Func<string, List<string>> textSeperateFunction = (text) => text.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+					  
+			Func<string, List<string>> textSeperateFunction = (text) => text.ToLower().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
 
 			var wordprocessor = new WordFrequencyAnalyzer(textSeperateFunction);
