@@ -38,6 +38,21 @@ namespace Test
         }
 
         [TestMethod]
+        public void CalculateMostFrequentNWords_Given_EmptyText_and_Positive_N__Should_Return_EmptySet()
+        {
+            //arrange
+            string text = string.Empty;
+            int n = 5;
+            var wordFrequencyAnalyser = new WordFrequencyAnalyzer(textPrepareForFrpcessingFunction);
+
+            //act
+            var listOfWordFrequencies = wordFrequencyAnalyser.CalculateMostFrequentNWords(text, n);
+
+            // Assert
+            Assert.AreEqual(0, listOfWordFrequencies.Count);
+        }
+
+        [TestMethod]
         public void CalculateMostFrequentNWords_Given_N_is_Three_Should_Return_Description()
         {
             /*

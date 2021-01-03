@@ -7,10 +7,12 @@ namespace Test
 	public class WordFrequencyAnalyzer : IWordFrequencyAnalyzer
 	{
 		private readonly Func<string, List<string>> textPrepareForFrpcessingFunction;
-
+			
 		public WordFrequencyAnalyzer(Func<string, List<string>> textSeperateFunction)
 		{
-			this.textPrepareForFrpcessingFunction = textSeperateFunction;
+			//caller kan hier andere split seperators meegeven via de constructor. Voor nu hard-coded op 'spaces'
+			this.textPrepareForFrpcessingFunction =
+				(text) => text.ToLower().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
 		}
 
 		public int CalculateHighestFrequency(string text)
